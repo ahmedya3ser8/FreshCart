@@ -4,6 +4,18 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 function PopularCategories() {
+  const data = [
+    {imgUrl: '/images/popular-categories/music.jpeg', text: 'Music', title: 'music-img'},
+    {imgUrl: '/images/popular-categories/men.jpeg', text: 'Men\'s Fashion', title: 'men-img'},
+    {imgUrl: '/images/popular-categories/women.jpeg', text: 'Women\'s Fashion', title: 'women-img'},
+    {imgUrl: '/images/popular-categories/supermarket.png', text: 'Supermarket', title: 'supermarket-img'},
+    {imgUrl: '/images/popular-categories/baby & toys.png', text: 'Baby & Toys', title: 'babyToys-img'},
+    {imgUrl: '/images/popular-categories/home.png', text: 'Home', title: 'home-img'},
+    {imgUrl: '/images/popular-categories/books.png', text: 'Books', title: 'books-img'},
+    {imgUrl: '/images/popular-categories/beuaty & health.png', text: 'Beuaty & Health', title: 'beuatyHealth-img'},
+    {imgUrl: '/images/popular-categories/mobiles.png', text: 'Mobiles', title: 'mobiles-img'},
+    {imgUrl: '/images/popular-categories/electronics.png', text: 'Electronics', title: 'electronics-img'},
+  ]
   return (
     <section className="py-10">
       <div className="container">
@@ -40,46 +52,12 @@ function PopularCategories() {
                 }
               }}
             >
-              <SwiperSlide>
-                  <img src="/public/images/popular-categories/music.jpeg" alt="music-img" className='h-[200px] w-full object-cover' />
-                  <h5 className='text-center text-[#777]'>Music</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/men.jpeg" alt="men-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Men&apos;s Fashion</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/women.jpeg" alt="women-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Women&apos;s Fashion</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/supermarket.png" alt="supermarket-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Supermarket</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/baby & toys.png" alt="babytoys-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Baby & Toys</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/home.png" alt="home-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Home</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/books.png" alt="books-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Books</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/beuaty & health.png" alt="beuatyhealth-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Beuaty & Health</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/mobiles.png" alt="mobiles-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Mobiles</h5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="/public/images/popular-categories/electronics.png" alt="electronics-img" className='h-[200px] w-full object-cover' />
-                <h5 className='text-center text-[#777]'>Electronics</h5>
-              </SwiperSlide>
+              {data.map((categorie, index) => (
+                <SwiperSlide key={index}>
+                    <img src={categorie.imgUrl} alt={categorie.title} className='h-[200px] w-full object-cover' />
+                    <h5 className='text-center text-[#777]'>{categorie.text}</h5>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

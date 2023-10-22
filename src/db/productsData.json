@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "/public/images/products/women-01.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Shawl",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 2,
+    "imgUrl": "/public/images/products/women-02.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Shawl",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 3,
+    "imgUrl": "/public/images/products/women-03.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Shawl",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 4,
+    "imgUrl": "/public/images/products/women-04.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Shawl",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 5,
+    "imgUrl": "/public/images/products/women-05.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Shawl",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 6,
+    "imgUrl": "/public/images/products/women-06.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Bordeaux Long",
+    "price": 150,
+    "rate": 4.8
+  },
+  {
+    "id": 7,
+    "imgUrl": "/public/images/products/women-07.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Bordeaux Long",
+    "price": 370,
+    "rate": 4.8
+  },
+  {
+    "id": 8,
+    "imgUrl": "/public/images/products/women-08.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Standart Fit",
+    "price": 450,
+    "rate": 4.2
+  },
+  {
+    "id": 9,
+    "imgUrl": "/public/images/products/women-09.jpeg",
+    "title": "Women's Fashion",
+    "text": "Relaxed Fit Knitted",
+    "price": 250,
+    "rate": 4.5
+  },
+  {
+    "id": 10,
+    "imgUrl": "/public/images/products/women-10.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Socks",
+    "price": 120,
+    "rate": 3.8
+  },
+  {
+    "id": 11,
+    "imgUrl": "/public/images/products/women-11.jpeg",
+    "title": "Women's Fashion",
+    "text": "Woman Karma Socks",
+    "price": 280,
+    "rate": 3.8
+  },
+  {
+    "id": 12,
+    "imgUrl": "/public/images/products/men-01.jpeg",
+    "title": "Men's Fashion",
+    "text": "Logo T-Shirt Green",
+    "price": 350,
+    "rate": 4.8
+  },
+  {
+    "id": 13,
+    "imgUrl": "/public/images/products/men-02.jpeg",
+    "title": "Men's Fashion",
+    "text": "Orca Leather Boots",
+    "price": 2150,
+    "rate": 4.8
+  },
+  {
+    "id": 14,
+    "imgUrl": "/public/images/products/men-03.jpeg",
+    "title": "Men's Fashion",
+    "text": "Softride Enzo NXT",
+    "price": 3550,
+    "rate": 4.8
+  },
+  {
+    "id": 15,
+    "imgUrl": "/public/images/products/men-04.jpeg",
+    "title": "Men's Fashion",
+    "text": "Logo T-Shirt Green",
+    "price": 2750,
+    "rate": 4.8
+  },
+  {
+    "id": 16,
+    "imgUrl": "/public/images/products/men-05.jpeg",
+    "title": "Men's Fashion",
+    "text": "ESS Big Logo",
+    "price": 2590,
+    "rate": 4.8
+  },
+  {
+    "id": 17,
+    "imgUrl": "/public/images/products/men-06.jpeg",
+    "title": "Men's Fashion",
+    "text": "Sportswear Club Graphic",
+    "price": 2370,
+    "rate": 4.8
+  },
+  {
+    "id": 18,
+    "imgUrl": "/public/images/products/men-07.jpeg",
+    "title": "Men's Fashion",
+    "text": "NSW Everyday Essentials",
+    "price": 1550,
+    "rate": 4.8
+  },
+  {
+    "id": 19,
+    "imgUrl": "/public/images/products/men-08.jpeg",
+    "title": "Men's Fashion",
+    "text": "Court Tennis Track",
+    "price": 1350,
+    "rate": 4.8
+  },
+  {
+    "id": 20,
+    "imgUrl": "/public/images/products/men-09.jpeg",
+    "title": "Men's Fashion",
+    "text": "React Live Sneakers",
+    "price": 4350,
+    "rate": 4.8
+  },
+  {
+    "id": 21,
+    "imgUrl": "/public/images/products/men-10.jpeg",
+    "title": "Men's Fashion",
+    "text": "Essentials Embroidered Linear",
+    "price": 750,
+    "rate": 4.8
+  },
+  {
+    "id": 22,
+    "imgUrl": "/public/images/products/men-11.jpeg",
+    "title": "Men's Fashion",
+    "text": "Salah Track Top",
+    "price": 1750,
+    "rate": 3.8
+  },
+  {
+    "id": 23,
+    "imgUrl": "/public/images/products/men-12.jpeg",
+    "title": "Men's Fashion",
+    "text": "Adicolor Classics Beckenbauer",
+    "price": 2750,
+    "rate": 3.8
+  },
+  {
+    "id": 24,
+    "imgUrl": "/public/images/products/men-13.jpeg",
+    "title": "Men's Fashion",
+    "text": "Duramo 10 Running",
+    "price": 1650,
+    "rate": 3.8
+  },
+  {
+    "id": 25,
+    "imgUrl": "/public/images/products/men-14.jpeg",
+    "title": "Men's Fashion",
+    "text": "Hoops 3.0 Low",
+    "price": 1850,
+    "rate": 3.8
+  },
+  {
+    "id": 26,
+    "imgUrl": "/public/images/products/men-15.jpeg",
+    "title": "Men's Fashion",
+    "text": "Galaxy 6 Running",
+    "price": 2858,
+    "rate": 3.8
+  },
+  {
+    "id": 27,
+    "imgUrl": "/public/images/products/men-16.jpeg",
+    "title": "Men's Fashion",
+    "text": "Slim Fit Long",
+    "price": 634,
+    "rate": 3.8
+  },
+  {
+    "id": 28,
+    "imgUrl": "/public/images/products/men-17.jpeg",
+    "title": "Men's Fashion",
+    "text": "Crew Neck Long",
+    "price": 484,
+    "rate": 4.6
+  },
+  {
+    "id": 29,
+    "imgUrl": "/public/images/products/men-18.jpeg",
+    "title": "Men's Fashion",
+    "text": "Crew Neck Long",
+    "price": 682,
+    "rate": 4.6
+  },
+  {
+    "id": 30,
+    "imgUrl": "/public/images/products/men-19.jpeg",
+    "title": "Men's Fashion",
+    "text": "Crew Neck Long",
+    "price": 545,
+    "rate": 4.6
+  },
+  {
+    "id": 31,
+    "imgUrl": "/public/images/products/men-20.jpeg",
+    "title": "Men's Fashion",
+    "text": "Polo Collar Short",
+    "price": 431,
+    "rate": 4.6
+  },
+  {
+    "id": 32,
+    "imgUrl": "/public/images/products/men-21.jpeg",
+    "title": "Men's Fashion",
+    "text": "Standard Pattern Plaid",
+    "price": 667,
+    "rate": 4.6
+  },
+  {
+    "id": 33,
+    "imgUrl": "/public/images/products/men-22.jpeg",
+    "title": "Men's Fashion",
+    "text": "Slim Fit Stand",
+    "price": 1460,
+    "rate": 4.6
+  },
+  {
+    "id": 34,
+    "imgUrl": "/public/images/products/electronics-01.jpeg",
+    "title": "Men's Fashion",
+    "text": "Archer VR300 AC1200",
+    "price": 1760,
+    "rate": 4.6
+  },
+  {
+    "id": 35,
+    "imgUrl": "/public/images/products/electronics-02.jpeg",
+    "title": "Men's Fashion",
+    "text": "PIXMA G3420 Multi-Function",
+    "price": 4790,
+    "rate": 4.8
+  },
+  {
+    "id": 36,
+    "imgUrl": "/public/images/products/electronics-03.jpeg",
+    "title": "Men's Fashion",
+    "text": "EOS M50 Mark",
+    "price": 18900,
+    "rate": 4.8
+  },
+  {
+    "id": 37,
+    "imgUrl": "/public/images/products/electronics-04.jpeg",
+    "title": "Men's Fashion",
+    "text": "PS5 DualSense Charging",
+    "price": 9790,
+    "rate": 4.8
+  },
+  {
+    "id": 38,
+    "imgUrl": "/public/images/products/electronics-05.jpeg",
+    "title": "Men's Fashion",
+    "text": "Galaxy Buds 2",
+    "price": 3445,
+    "rate": 4.8
+  },
+  {
+    "id": 39,
+    "imgUrl": "/public/images/products/electronics-06.jpeg",
+    "title": "Men's Fashion",
+    "text": "WH-CH510 Wireless On-Ear",
+    "price": 4790,
+    "rate": 4.8
+  },
+  {
+    "id": 40,
+    "imgUrl": "/public/images/products/electronics-07.jpeg",
+    "title": "Men's Fashion",
+    "text": "Victus 16-D1016Ne Laptop",
+    "price": 24730,
+    "rate": 4.8
+  }
+]
