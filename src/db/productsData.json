@@ -163,7 +163,7 @@
     "id": 21,
     "imgUrl": "/public/images/products/men-10.jpeg",
     "title": "Men's Fashion",
-    "text": "Essentials Embroidered Linear",
+    "text": "Essentials Embroidered",
     "price": 750,
     "rate": 4.8
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "imgUrl": "/public/images/products/men-12.jpeg",
     "title": "Men's Fashion",
-    "text": "Adicolor Classics Beckenbauer",
+    "text": "Adicolor Classics",
     "price": 2750,
     "rate": 3.8
   },
@@ -275,7 +275,7 @@
     "id": 35,
     "imgUrl": "/public/images/products/electronics-02.jpeg",
     "title": "Men's Fashion",
-    "text": "PIXMA G3420 Multi-Function",
+    "text": "PIXMA G3420",
     "price": 4790,
     "rate": 4.8
   },
@@ -307,7 +307,7 @@
     "id": 39,
     "imgUrl": "/public/images/products/electronics-06.jpeg",
     "title": "Men's Fashion",
-    "text": "WH-CH510 Wireless On-Ear",
+    "text": "WH-CH510 Wireless",
     "price": 4790,
     "rate": 4.8
   },
