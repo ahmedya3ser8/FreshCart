@@ -14,12 +14,12 @@ function Footer() {
         <div className="footer-bottom flex justify-between items-center flex-col lg:flex-row pt-10">
           <div className="left flex items-center gap-5">
             <span className="text-[#777]">Payment Partners</span>
-            <img src="/public/images/pay.webp" alt="pay-img" />
+            <img src="/images/pay.webp" alt="pay-img" />
           </div>
           <div className="right flex items-center gap-5">
             <span className="text-[#777] text-[14px]">Get deliveries with FreshCart</span>
-            <img src="/public/images/app-store/appStore.png" alt="appStore"  className="w-[100px]"/>
-            <img src="/public/images/app-store/googlePlay.png" alt="googlePlay" className="w-[100px]" />
+            <img src="/images/app-store/appStore.png" alt="appStore"  className="w-[100px]"/>
+            <img src="/images/app-store/googlePlay.png" alt="googlePlay" className="w-[100px]" />
           </div>
         </div>
       </div>

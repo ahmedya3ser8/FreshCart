@@ -1,13 +1,19 @@
-import { useSelector } from 'react-redux';
 import {AiOutlineHeart, AiFillStar} from 'react-icons/ai';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
-function Products() {
+function ProductsPage() {
+  const [search, setSearch] = useState('');
   const products = useSelector(state => state.products.productsData);
+
   return (
-    <section className="py-12">
+    <div className="products pt-20 py-16 min-h-[calc(100vh-80px)]">
       <div className="container">
+        <div className="product-input mb-8">
+          <input type="text" placeholder="Search..." id="product-search" onChange={(e) => setSearch(e.target.value) } className="p-[10px] h-[40px] rounded-[10px] bg-[#eee] border-[1px] border-solid border-[#ccc] outline-none w-[80%] block m-auto"/>
+        </div>
         <div className="products-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
-          {products.map(product => (
+          {products.filter(item => search.toLowerCase() === '' ? item : item.category.toLowerCase().indexOf(search) !== -1).map(product => (
             <div className="product-content p-[20px] border-2 border-solid border-[#ccc] relative" key={product.id}>
               <AiOutlineHeart className='absolute right-1 top-2 text-[#0aad0a] text-[22px] cursor-pointer'/>
               <div className="product-img mt-2">
@@ -29,8 +35,8 @@ function Products() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
-export default Products;
+export default ProductsPage;

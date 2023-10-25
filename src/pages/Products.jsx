@@ -1,7 +1,10 @@
+import ProductsPage from "../components/productsPage/ProductsPage";
 
 function Products() {
   return (
-    <div>Products</div>
+    <main>
+      <ProductsPage />
+    </main>
   )
 }
 
