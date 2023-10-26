@@ -1,7 +1,10 @@
+import BrandsItems from "../components/brands/BrandsItems";
 
 function Brands() {
   return (
-    <div>Brands</div>
+    <main className="pt-[100px] pb-12">
+      <BrandsItems />
+    </main>
   )
 }
 

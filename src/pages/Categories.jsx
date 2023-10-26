@@ -1,7 +1,10 @@
+import CategoryItem from "../components/categories/CategoryItem";
 
 function Categories() {
   return (
-    <div>Caregories</div>
+    <main className="pt-[100px] pb-12">
+      <CategoryItem />
+    </main>
   )
 }
 

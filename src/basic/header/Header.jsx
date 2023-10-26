@@ -3,12 +3,11 @@ import {AiFillHeart, AiOutlineShoppingCart, AiOutlineLogout, AiOutlineMenu, AiOu
 import { Link } from "react-router-dom";
 
 function Header() {
-  const [links, setLinks]= useState([
+  const [links]= useState([
     {path: '/', text: 'Home'},
     {path: 'products', text: 'Products'},
     {path: 'categories', text: 'Categories'},
-    {path: 'brands', text: 'Brands'},
-    {path: 'wishlist', text: 'Wishlist'},
+    {path: 'brands', text: 'Brands'}
   ]);
   const [openMenu, setopenMenu] = useState(false);
   return (
@@ -23,7 +22,7 @@ function Header() {
               {openMenu ? <AiOutlineClose/> : <AiOutlineMenu/>}
             </div>
           </div>
-          <div className="right flex gap-6">
+          <div className="right flex gap-10">
             <nav>
               <ul className={openMenu ? 'absolute left-[25px] top-[60px] w-full h-[222px] bg-[#fbf9f9]' : 'hidden md:flex md:gap-3'}>
                 {links.map((link, index) => (
