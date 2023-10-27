@@ -1,10 +1,12 @@
 import {AiOutlineHeart, AiFillStar} from 'react-icons/ai';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { addToCart } from '../../rtk/slices/cartSlice';
 
 function ProductsPage() {
   const [search, setSearch] = useState('');
   const products = useSelector(state => state.products.productsData);
+  const dispatch = useDispatch();
 
   return (
     <div className="products pt-20 py-16 min-h-[calc(100vh-80px)]">
@@ -30,7 +32,7 @@ function ProductsPage() {
                   {product.rate}
                 </span>
               </div>
-              <button className='bg-[#0aad0a] block w-full p-[8px] text-white'>Add To Cart</button>
+              <button className='bg-[#0aad0a] block w-full p-[8px] text-white' onClick={() => dispatch(addToCart(product)) }>Add To Cart</button>
             </div>
           ))}
         </div>
