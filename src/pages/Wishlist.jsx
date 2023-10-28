@@ -1,7 +1,10 @@
+import WishlistProducts from "../components/wishlist/WishlistProducts";
 
 function Wishlist() {
   return (
-    <div>Wishlist</div>
+    <main>
+      <WishlistProducts />
+    </main>
   )
 }
 

@@ -6,10 +6,13 @@ import Categories from "./pages/Categories";
 import Brands from "./pages/Brands";
 import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />}/>

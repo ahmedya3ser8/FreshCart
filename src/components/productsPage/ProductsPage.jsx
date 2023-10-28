@@ -2,6 +2,7 @@ import {AiOutlineHeart, AiFillStar} from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addToCart } from '../../rtk/slices/cartSlice';
+import { addToWishlist } from '../../rtk/slices/wishlistSlice';
 
 function ProductsPage() {
   const [search, setSearch] = useState('');
@@ -17,7 +18,9 @@ function ProductsPage() {
         <div className="products-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
           {products.filter(item => search.toLowerCase() === '' ? item : item.category.toLowerCase().indexOf(search) !== -1).map(product => (
             <div className="product-content p-[20px] border-2 border-solid border-[#ccc] relative" key={product.id}>
-              <AiOutlineHeart className='absolute right-1 top-2 text-[#0aad0a] text-[22px] cursor-pointer'/>
+              <button onClick={() => dispatch(addToWishlist(product))}>
+                <AiOutlineHeart className='absolute right-1 top-2 text-[#0aad0a] text-[22px] cursor-pointer'/>
+              </button>
               <div className="product-img mt-2">
                 <img src={product.imgUrl} alt={product.category} className='w-full object-cover' />
               </div>

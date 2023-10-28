@@ -5,7 +5,11 @@ import { addToCart, decreaseQuantity, removeItemFromCart, clearItemsFromCart } f
 
 function CartItems() {
   const cart = useSelector(state => state.cart.cartItems);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const totalPrice = cart.reduce((acc, product) => {
+    acc += product.price * product.quantity;
+    return acc;
+  }, 0);
   return (
     <section className='pt-[75px] pb-10'>
       <div className="container">
@@ -15,7 +19,7 @@ function CartItems() {
               <div className="cart-box bg-[#f0f3f2] p-[10px]" key={index}>
                 <h2 className='text-[25px] text-[#777] mb-1'>Shop Cart</h2>
                 <div className="cart-head flex justify-between items-center p-[10px] mb-[20px] text-[#0aad0a]">
-                  <h5>Total Cart Price :<span>{` ${product.price} EGP`}</span></h5>
+                  <h5>Total Cart Price :<span>{` ${totalPrice} EGP`}</span></h5>
                   <button className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>checkout</button>
                 </div>
                 <div className="cart-body flex justify-between items-center flex-col md:flex-row mb-[10px]">
@@ -44,7 +48,7 @@ function CartItems() {
                   </div>
                 </div>
                 <div className="total-price border-b-[1px] border-solid border-[#0aad0a] text-[#0aad0a] pr-[10px]">
-                  <p className='text-right mb-5'>Total Price items :<span>{` ${product.price} EGP`}</span></p>
+                  <p className='text-right mb-5'>Total Price items :<span>{` ${product.price * product.quantity} EGP`}</span></p>
                 </div>
               </div>
             ))

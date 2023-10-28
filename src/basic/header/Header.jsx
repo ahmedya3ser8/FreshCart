@@ -12,13 +12,14 @@ function Header() {
   ]);
   const [openMenu, setopenMenu] = useState(false);
   const cart = useSelector(state => state.cart.cartItems);
+  const wishlist = useSelector(state => state.wishlist.wishlistItems);
   return (
-    <header className="h-[65px] p-[10px] bg-[#f6f6f6] fixed w-full left-0 top-0 z-10">
+    <header className="h-[60px] md:h-[65px] p-[10px] bg-[#f6f6f6] fixed w-full left-0 top-0 z-10">
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="left w-1/2 flex justify-between items-center flex-row-reverse gap-5 md:justify-end md:gap-0">
             <Link to={"/"} className="logo" title="logo">
-              <img src="/images/logo.svg" alt="logo-img" className="h-[40px] object-cover" />
+              <img src="/images/logo.svg" alt="logo-img" className="h-[22px] md:h-[40px] object-cover" />
             </Link>
             <div className="text-[22px] cursor-pointer md:hidden" onClick={() => setopenMenu(!openMenu)}>
               {openMenu ? <AiOutlineClose/> : <AiOutlineMenu/>}
@@ -37,7 +38,7 @@ function Header() {
             <div className="links flex items-center gap-[20px]">
               <Link to={'wishlist'} title="Heart" className="relative">
                 <AiFillHeart className="text-[#0aad0a] text-[30px]" />
-                <span className="absolute top-[-5px] right-[-12px] w-[20px] h-[20px] rounded-full bg-black text-white text-[10px] flex justify-center items-center">2</span>
+                <span className="absolute top-[-5px] right-[-12px] w-[20px] h-[20px] rounded-full bg-black text-white text-[10px] flex justify-center items-center">{wishlist.length}</span>
               </Link>
               <Link to={'cart'} title="cart" className="relative">
                 <AiOutlineShoppingCart className="text-[#0aad0a] text-[30px]" />
