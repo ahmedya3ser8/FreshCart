@@ -1,7 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
-import {AiFillDelete, AiFillHeart} from 'react-icons/ai';
+import {AiFillDelete, AiOutlineHeart} from 'react-icons/ai';
 import {Link} from 'react-router-dom';
 import { addToCart, decreaseQuantity, removeItemFromCart, clearItemsFromCart } from '../../rtk/slices/cartSlice';
+import { addToWishlist } from '../../rtk/slices/wishlistSlice';
 
 function CartItems() {
   const cart = useSelector(state => state.cart.cartItems);
@@ -20,7 +21,7 @@ function CartItems() {
                 <h2 className='text-[25px] text-[#777] mb-1'>Shop Cart</h2>
                 <div className="cart-head flex justify-between items-center p-[10px] mb-[20px] text-[#0aad0a]">
                   <h5>Total Cart Price :<span>{` ${totalPrice} EGP`}</span></h5>
-                  <button className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>checkout</button>
+                  <Link to={'/checkout'} className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>checkout</Link>
                 </div>
                 <div className="cart-body flex justify-between items-center flex-col md:flex-row mb-[10px]">
                   <div className="left flex gap-6">
@@ -35,8 +36,8 @@ function CartItems() {
                           <AiFillDelete className='text-[#0aad0a] text-[22px]' />
                           remove
                         </button>
-                        <button className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>
-                          <AiFillHeart className='text-[#0aad0a] text-[22px]' />
+                        <button className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]' onClick={() => dispatch(addToWishlist(product))}>
+                          <AiOutlineHeart className='text-[#0aad0a] text-[22px]' />
                         </button>
                       </div>
                     </div>

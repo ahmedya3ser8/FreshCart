@@ -19,12 +19,12 @@ function WishlistProducts() {
                   <img src={product.imgUrl} alt="img-wishlist" className='w-[120px] object-cover' />
                   <div className="wishlist-body flex justify-between items-center flex-1 flex-row gap-5 px-[15px]">
                     <div className="left flex flex-col gap-[10px]">
-                      <h4 className='text-[17px]'>{product.text}</h4>
-                      <p className='text-[17px]'>Price:{` ${product.price} EGP`}</p>
+                      <h4 className='text-[17px] text-[#777]'>{product.text}</h4>
+                      <p className='text-[17px] text-[#0aad0a]'>Price:{` ${product.price} EGP`}</p>
                     </div>
                     <div className="right">
-                      <button className='flex items-center gap-[5px] p-[8px] border-[1px] border-solid border-[#ccc] rounded-[10px]' onClick={() => dispatch(removeItemFromWishlist(product))}>
-                        <AiFillDelete className='text-[#0aad0a] text-[22px]' />
+                      <button className='flex items-center gap-[5px] text-[#0aad0a] p-[8px] border-[1px] border-solid border-[#ccc] rounded-[10px]' onClick={() => dispatch(removeItemFromWishlist(product))}>
+                        <AiFillDelete className='text-[22px]' />
                         remove
                       </button>
                     </div>
@@ -45,7 +45,7 @@ function WishlistProducts() {
           )}
             {wishlist.length > 0 && (
               <div className="remove-wishlist bg-[#f0f3f2] p-5">
-                <button className='block w-fit p-[10px] border-[1px] border-solid border-[#ccc] m-auto text-[#0aad0a] rounded-[10px]' onClick={() => dispatch(clearItemsFromWishlist())}>Remove cart</button>
+                <button className='block w-fit p-[10px] border-[1px] border-solid border-[#ccc] m-auto text-[#0aad0a] rounded-[10px]' onClick={() => dispatch(clearItemsFromWishlist())}>Remove Wishlist</button>
               </div>
             )}
         </div>
