@@ -1,5 +1,5 @@
 import Hero from "../components/hero/Hero";
-import PopularCategories from "../components/popualrCategories/PopularCategories";
+import PopularCategories from "../components/popularCategories/PopularCategories";
 import Products from "../components/products/Products";
 
 function Home() {

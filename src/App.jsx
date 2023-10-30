@@ -9,12 +9,14 @@ import Cart from "./pages/Cart";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Checkout from "./pages/Checkout";
+import Register from "./pages/Register";
 
 function App() {
   return (
     <>
       <ToastContainer />
       <Routes>
+        <Route path="register" element={<Register />}/>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />}/>
           <Route path="products" element={<Products />}/>

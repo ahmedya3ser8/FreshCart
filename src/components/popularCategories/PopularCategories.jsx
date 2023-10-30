@@ -54,8 +54,8 @@ function PopularCategories() {
             >
               {data.map((categorie, index) => (
                 <SwiperSlide key={index}>
-                    <img src={categorie.imgUrl} alt={categorie.title} className='h-[200px] w-full object-cover' />
-                    <h5 className='text-center text-[#777]'>{categorie.text}</h5>
+                  <img src={categorie.imgUrl} alt={categorie.title} className='h-[200px] w-full object-cover' />
+                  <h5 className='text-center text-[#777]'>{categorie.text}</h5>
                 </SwiperSlide>
               ))}
             </Swiper>
