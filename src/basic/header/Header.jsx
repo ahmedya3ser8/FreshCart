@@ -13,6 +13,9 @@ function Header() {
   const [openMenu, setopenMenu] = useState(false);
   const cart = useSelector(state => state.cart.cartItems);
   const wishlist = useSelector(state => state.wishlist.wishlistItems);
+  const handleLogout = () => {
+    localStorage.clear();
+  }
   return (
     <header className="h-[60px] md:h-[65px] p-[10px] bg-[#f6f6f6] fixed w-full left-0 top-0 z-10">
       <div className="container">
@@ -44,7 +47,7 @@ function Header() {
                 <AiOutlineShoppingCart className="text-[#0aad0a] text-[30px]" />
                 <span className="absolute top-[-5px] right-[-12px] w-[20px] h-[20px] rounded-full bg-black text-white text-[10px] flex justify-center items-center">{cart.length}</span>
               </Link>
-              <Link to={'register'} title="logout">
+              <Link to={'register'} title="logout" onClick={handleLogout}>
                 <AiOutlineLogout className="text-[#0aad0a] text-[30px]" />
               </Link>
             </div>

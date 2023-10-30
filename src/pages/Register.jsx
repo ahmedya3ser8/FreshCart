@@ -11,14 +11,34 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState(0);
   const [gender, setGender] = useState('');
   const navigate = useNavigate();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    const emailRe = /\w+@gmail.(com|info|org|)/ig;
+    const phoneRe = /(010|011|012|015)\d{9}/;
+    const passwordRe = /\w+/ig;
+    const confirmPasswordRe = /\w+/ig;
+    const validateEmail= emailRe.test(email);
+    const validatePhone= phoneRe.test(phone);
+    const validatePassword= passwordRe.test(password);
+    const validatePasswordRe= confirmPasswordRe.test(confirmPassword);
+    let confirmed;
+
+    if(password === confirmPassword) {
+      confirmed = true;
+    } else {
+      toast.error('password not matched', {
+        position: 'bottom-left',
+        autoClose: 1500,
+      });
+    }
+
     if(name == '' | userName == '' | email == '' | phone == '' | password == '' | confirmPassword == '' | gender == '') {
       toast.error('Check All Inputs', {
         position: 'bottom-left',
         autoClose: 1500,
       });
-    } else {
+    } else if(validateEmail && validatePhone && validatePassword && validatePasswordRe && confirmed) {
       localStorage.setItem('name', JSON.stringify(name));
       localStorage.setItem('userName', JSON.stringify(userName));
       localStorage.setItem('email', JSON.stringify(email));
@@ -30,11 +50,16 @@ function Register() {
         position: 'bottom-left',
         autoClose: 1500,
       });
-      navigate('/')
+      navigate('/login')
+    } else {
+      toast.error('invalid email or phone or password', {
+        position: 'bottom-left',
+        autoClose: 1500,
+      });
     }
   }
   return (
-    <section className="bg-[#7e9cd8] h-screen">
+    <section className="bg-[#8d76c4] h-screen">
       <div className="container">
         <div className="register-form w-[95%] md:w-auto bg-white flex flex-col justify-center items-center absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-5">
           <h2 className="text-[25px] text-left block w-full mb-[5px] md:mb-[10px] relative before:content-[''] before:absolute before:w-[40px] before:h-[2px] before:bottom-0 before:bg-blue-400 pb-1">Registration</h2>
@@ -72,15 +97,15 @@ function Register() {
             <label className="block text-[20px] text-[#666] mb-[5px] md:mb-[15px]">Gender</label>
             <div className="flex justify-between items-center px-0 md:px-[20px] gap-5 mb-[10px]">
               <div className="flex items-center gap-[5px]">
-                <input type="radio" name="gender" id="male" value={gender} onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
+                <input type="radio" name="gender" id="male" value='male' onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
                 <label htmlFor="male" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">male</label>
               </div>
               <div className="flex items-center gap-[5px]">
-                <input type="radio" name="gender" id="female" value={gender} onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"  />
+                <input type="radio" name="gender" id="female" value='female' onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"  />
                 <label htmlFor="female" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">female</label>
               </div>
               <div className="flex items-center gap-[5px]">
-                <input type="radio" name="gender" id="other" value={gender} onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"  />
+                <input type="radio" name="gender" id="other" value='other' onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"  />
                 <label htmlFor="other" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">prefer not to say</label>
               </div>
             </div>
