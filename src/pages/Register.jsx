@@ -97,7 +97,7 @@ function Register() {
             <label className="block text-[20px] text-[#666] mb-[5px] md:mb-[15px]">Gender</label>
             <div className="flex justify-between items-center px-0 md:px-[20px] gap-5 mb-[10px]">
               <div className="flex items-center gap-[5px]">
-                <input type="radio" name="gender" id="male" value='male' checked onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
+                <input type="radio" name="gender" id="male" value='male' onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
                 <label htmlFor="male" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">male</label>
               </div>
               <div className="flex items-center gap-[5px]">
