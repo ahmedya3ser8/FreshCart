@@ -21,7 +21,7 @@ function CartItems() {
                 <h2 className='text-[25px] text-[#777] mb-1'>Shop Cart</h2>
                 <div className="cart-head flex justify-between items-center p-[10px] mb-[20px] text-[#0aad0a]">
                   <h5>Total Cart Price :<span>{` ${totalPrice} EGP`}</span></h5>
-                  <Link to={'/checkout'} className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>checkout</Link>
+                  <Link to={'/home/cart/checkout'} className='p-[10px] border-[1px] border-solid border-[#ccc] rounded-[10px]'>checkout</Link>
                 </div>
                 <div className="cart-body flex justify-between items-center flex-col md:flex-row mb-[10px]">
                   <div className="left flex gap-6">
@@ -57,7 +57,7 @@ function CartItems() {
             <div className="h-[35vh] flex justify-center items-center bg-[#f0f3f2]">
               <h2 className='text-[22px] text-[#0aad0a] p-[10px]'>
                 Your Cart Is Empty:
-                <Link to={'/products'} className='text-[22px] underline pl-[5px]'> Go To Shopping</Link>
+                <Link to={'/home/products'} className='text-[22px] underline pl-[5px]'> Go To Shopping</Link>
               </h2>
             </div>
           )}

@@ -1,10 +1,11 @@
 
 function Footer() {
+  const userName = JSON.parse(localStorage.getItem('name'));
   return (
     <footer className="bg-[#f0f3f2] py-8">
       <div className="container">
         <div className="footer-head border-b-[1px] border-solid border-[#ccc] pb-10">
-          <h3 className="text-[25px] mb-[10px]">Welcome ahmed Get the FreshCart app</h3>
+          <h3 className="text-[25px] mb-[10px]">Welcome <span className="text-[#0aad04]">{userName}</span> Get the FreshCart app</h3>
           <p className="text-[18px] text-[#777] mb-[10px]">we will send you a link , open it on your phone to download the app</p>
           <div className="flex flex-col lg:flex-row gap-6">
             <input type="text" id="footer-input" className="w-full h-[40px] rounded-[10px] outline-none p-2" />

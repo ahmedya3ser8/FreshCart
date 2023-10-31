@@ -39,7 +39,7 @@ function WishlistProducts() {
             <div className="h-[35vh] flex justify-center items-center bg-[#f0f3f2]">
               <h2 className='text-[22px] text-[#0aad0a] p-[10px]'>
                 Your Wishlist Is Empty:
-                <Link to={'/products'} className='text-[22px] underline pl-[5px]'> Go To Shopping</Link>
+                <Link to={'/home/products'} className='text-[22px] underline pl-[5px]'> Go To Shopping</Link>
               </h2>
             </div>
           )}

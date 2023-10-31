@@ -8,7 +8,7 @@ function CheckoutItem() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const addressRe = /[a-z]/g;
-    const phoneRe = /(010|011|012|015)\d{9}/;
+    const phoneRe = /(010|011|012|015)\d{8}/;
     const countryRe = /[a-z]/g;
     const ValidateAddress = addressRe.test(address);
     let ValidatePhone = phoneRe.test(phone);

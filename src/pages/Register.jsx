@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 function Register() {
@@ -15,7 +15,7 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const emailRe = /\w+@gmail.(com|info|org|)/ig;
-    const phoneRe = /(010|011|012|015)\d{9}/;
+    const phoneRe = /(010|011|012|015)\d{8}/;
     const passwordRe = /\w+/ig;
     const confirmPasswordRe = /\w+/ig;
     const validateEmail= emailRe.test(email);
@@ -63,11 +63,11 @@ function Register() {
       <div className="container">
         <div className="register-form w-[95%] md:w-auto bg-white flex flex-col justify-center items-center absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-5">
           <h2 className="text-[25px] text-left block w-full mb-[5px] md:mb-[10px] relative before:content-[''] before:absolute before:w-[40px] before:h-[2px] before:bottom-0 before:bg-blue-400 pb-1">Registration</h2>
-          <form className="register-form w-full md:w-[700px] h-auto md:h-[400px]" name="register-form">
+          <form className="register-content w-full md:w-[700px] h-auto md:h-[430px]" name="register-form" id="register-form" autoComplete="on">
             <div className="register-box flex justify-between items-center flex-col md:flex-row gap-0 md:gap-5 mb-2 md:mb-5">
               <div className="register-info w-full md:w-1/2">
                 <label htmlFor="Name" className="block text-[16px] md:text-[18px] mb-[5px] text-[#666]">Full Name</label>
-                <input type="text" placeholder="Enter Your Name" id="Name" name="FullName" onChange={(e) => setName(e.target.value)} className="w-full h-[40px] border-[1px] border-solid border-[#ccc] p-[10px] outline-none rounded-[10px]" />
+                <input type="text" placeholder="Enter Your Name" id="Name" name="FullName" autoFocus onChange={(e) => setName(e.target.value)} className="w-full h-[40px] border-[1px] border-solid border-[#ccc] p-[10px] outline-none rounded-[10px]" />
               </div>
               <div className="register-info w-full md:w-1/2">
                 <label htmlFor="UserName" className="block text-[16px] md:text-[18px] mb-[5px] text-[#666]">User Name</label>
@@ -97,7 +97,7 @@ function Register() {
             <label className="block text-[20px] text-[#666] mb-[5px] md:mb-[15px]">Gender</label>
             <div className="flex justify-between items-center px-0 md:px-[20px] gap-5 mb-[10px]">
               <div className="flex items-center gap-[5px]">
-                <input type="radio" name="gender" id="male" value='male' onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
+                <input type="radio" name="gender" id="male" value='male' checked onChange={(e) => setGender(e.target.value)} className="w-[18px] h-[18px] rounded-full bg-[#ddd] cursor-pointer"/>
                 <label htmlFor="male" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">male</label>
               </div>
               <div className="flex items-center gap-[5px]">
@@ -109,7 +109,8 @@ function Register() {
                 <label htmlFor="other" className="text-[14px] md:text-[18px] text-[#666] cursor-pointer">prefer not to say</label>
               </div>
             </div>
-            <button type="submit" className="block w-full bg-[#8d76c4] text-white font-medium p-[10px]" onClick={handleSubmit}>Sigin up</button>
+            <button type="submit" className="block w-full bg-[#8d76c4] text-white font-medium p-[10px] mb-[10px]" onClick={handleSubmit}>Sigin up</button>
+            <p className="mb-[15px] text-[18px] text-center text-[#666]">You have an account? <Link to={'/login'} className="text-[#8d76c4]">login</Link></p>
           </form>
         </div>
       </div>
